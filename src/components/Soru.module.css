@@ -1,0 +1,60 @@
+.soru {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+  border: 2px solid var(--colorBlueDark);
+  padding: 10px;
+}
+
+.soruCont {
+  display: flex;
+  flex-direction: column;
+  gap: 5px;
+}
+
+.soruCont p {
+  font-size: 1.3rem;
+  color: var(--colorBlueDark);
+  font-weight: bold;
+}
+
+.cevaplar {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  width: fit-content;
+  min-width: 40%;
+}
+
+.cevapCont {
+  display: flex;
+  gap: 10px;
+}
+
+.cevapCont label {
+  background-color: var(--colorBlue);
+  color: white;
+  padding: 10px;
+  width: 100%;
+  cursor: pointer;
+}
+
+.cevapCont input {
+  display: none;
+}
+
+.cevapCont input:checked + label {
+  background-color: var(--colorBlueDark);
+}
+
+.yanlisCevap {
+  background-color: var(--colorRed); 
+  padding: 10px;
+  color: white;
+}
+
+.dogruCevap {
+  background-color: green; 
+  padding: 10px;
+  color: white;
+}

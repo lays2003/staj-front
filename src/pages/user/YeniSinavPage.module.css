@@ -1,0 +1,39 @@
+.layout {
+  display: flex;
+  flex-direction: column;
+  gap: 40px;
+  height: 100%;
+}
+
+.sinavKategoriler {
+  display: flex;
+  gap: 20px;
+  flex-wrap: wrap;
+}
+
+
+.sinavKategori {
+  display: flex;
+  border: 2px solid var(--colorBlueDark);
+  align-items: center;
+  width: 100%;
+  gap: 20px;
+  text-decoration: none;
+  color: var(--colorBlueDark);
+}
+
+.sinavKategori:hover {
+  background-color: var(--colorBlue);
+  color:  white;
+}
+
+
+.sinavKategori:not(:first-of-type) {
+  width: calc(50% - 10px);
+}
+
+.sinavKategori img {
+  width: 200px;
+  height: 100%;
+  object-fit: cover;
+}

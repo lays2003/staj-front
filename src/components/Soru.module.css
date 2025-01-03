@@ -34,9 +34,10 @@
 .cevapCont label {
   background-color: var(--colorBlue);
   color: white;
-  padding: 10px;
+  padding: 14px;
   width: 100%;
   cursor: pointer;
+  font-size: 1.3rem;
 }
 
 .cevapCont input {
@@ -44,7 +45,8 @@
 }
 
 .cevapCont input:checked + label {
-  background-color: var(--colorBlueDark);
+  background-color: gold;
+  color: black;
 }
 
 .yanlisCevap {
@@ -57,4 +59,8 @@
   background-color: green; 
   padding: 10px;
   color: white;
+}
+
+.resim {
+  width: 400px;
 }

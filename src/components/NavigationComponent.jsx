@@ -10,14 +10,14 @@ export default function() {
   const isAdmin = ctx.user.yonetici;
 
   const adminNavLinks = [
-    {link: "/dashboard/profil", label:"Profil"},
-    {link: "/dashboard/sorular", label:"Sorular"},
+    {link: "/profil", label:"Profil"},
+    {link: "/sorular", label:"Sorular"},
   ];
 
   const userNavLinks = [
-    {link: "/dashboard/profil", label:"Profil"},
-    {link: "/dashboard/sinavlar", label:"Sınavlarım"},
-    {link: "/dashboard/yeniSinav", label:"Yeni Sınav Başlat"},
+    {link: "/profil", label:"Profil"},
+    {link: "/sinavlar", label:"Sınavlarım"},
+    {link: "/yeniSinav", label:"Yeni Sınav Başlat"},
   ];
 
   const navLinks = isAdmin ? adminNavLinks : userNavLinks;

@@ -112,6 +112,16 @@ export default function() {
     setOpenUpdateOverlay(true);
   }
 
+  function resimSec(e) {
+    if (e.target.files.length > 0) {
+      const fr = new FileReader();
+      fr.onload = function () {
+        setResim(fr.result);
+      }
+      fr.readAsDataURL(e.target.files[0]);
+    }
+  }
+
   return (
     <>
       <div className={classes.layout}>
@@ -162,8 +172,13 @@ export default function() {
       <div className={openCreateOverlay ? classes.overlayOpened : classes.overlayClosed}>
         <form className={classes.form}>
           {actionError.length > 0 && <ErrorState msg={actionError} />}
-
           <h1 className={classes.formTitle}>Soru Oluştur</h1>
+          <div className={classes.formInputCont}>
+            <label className={classes.imageCont} htmlFor="resim">
+              <img className={classes.image} src={resim || "https://placehold.co/600x400?text=SoruResim"} />
+            </label>
+            <input style={{display: "none"}} type={"file"} id="resim" name="resim" onChange={resimSec} />
+          </div>
           <div className={classes.formInputCont}>
             <label className={classes.formLabel} htmlFor="soru">Soru:</label>
             <input className={classes.formInput} id="soru" name="soru" value={soru} onChange={(e) => setSoru(e.target.value)} />
@@ -183,10 +198,6 @@ export default function() {
           <div className={classes.formInputCont}>
             <label className={classes.formLabel} htmlFor="d">D:</label>
             <input className={classes.formInput} id="d" name="d" value={d} onChange={(e) => setD(e.target.value)} />
-          </div>
-          <div className={classes.formInputCont}>
-            <label className={classes.formLabel} htmlFor="resim">Resim Link:</label>
-            <input className={classes.formInput} id="resim" name="resim" value={resim} onChange={(e) => setResim(e.target.value)} />
           </div>
           <div className={classes.formInputCont}>
             <label className={classes.formLabel} htmlFor="dogruCevap">Doğru Cevap:</label>
@@ -220,7 +231,12 @@ export default function() {
           {actionError.length > 0 && <ErrorState msg={actionError} />}
 
           <h1 className={classes.formTitle}>Soru Güncelle</h1>
-
+          <div className={classes.formInputCont}>
+            <label className={classes.imageCont} htmlFor="resim">
+              <img className={classes.image} src={resim || "https://placehold.co/600x400?text=SoruResim"} />
+            </label>
+            <input style={{display: "none"}} type={"file"} id="resim" name="resim" onChange={resimSec} />
+          </div>
           <div className={classes.formInputCont}>
             <label className={classes.formLabel} htmlFor="soru">Soru:</label>
             <input className={classes.formInput} id="soru" name="soru" value={soru} onChange={(e) => setSoru(e.target.value)} />
@@ -240,10 +256,6 @@ export default function() {
           <div className={classes.formInputCont}>
             <label className={classes.formLabel} htmlFor="d">D:</label>
             <input className={classes.formInput} id="d" name="d" value={d} onChange={(e) => setD(e.target.value)} />
-          </div>
-          <div className={classes.formInputCont}>
-            <label className={classes.formLabel} htmlFor="resim">Resim Link:</label>
-            <input className={classes.formInput} id="resim" name="resim" value={resim} onChange={(e) => setResim(e.target.value)} />
           </div>
           <div className={classes.formInputCont}>
             <label className={classes.formLabel} htmlFor="dogruCevap">Doğru Cevap:</label>

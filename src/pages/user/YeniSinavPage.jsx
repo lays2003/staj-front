@@ -20,26 +20,26 @@ export default function() {
       <div className={classes.layout}>
         <PageLabel label="Yeni Sınav" />
         <div className={classes.sinavKategoriler}>
-          <NavLink to="/dashboard/sinav/ehliyet" className={classes.sinavKategori}>
+          <NavLink to="/sinav/ehliyet" className={classes.sinavKategori}>
             <img src={ehliyetSinavKategori} />
             <h1>Ehliyet Sınav Soruları</h1>
           </NavLink>
-          <NavLink to="/dashboard/sinav/ilkyardim" className={classes.sinavKategori}>
+          <NavLink to="/sinav/ilkyardim" className={classes.sinavKategori}>
             <img src={ilkYardimKategori} />
             <h1>İlk Yardım Soruları</h1>
           </NavLink>
 
-          <NavLink to="/dashboard/sinav/motor" className={classes.sinavKategori}>
+          <NavLink to="/sinav/motor" className={classes.sinavKategori}>
             <img src={motorKategori} />
             <h1>Motor Soruları</h1>
           </NavLink>
 
-          <NavLink to="/dashboard/sinav/trafik" className={classes.sinavKategori}>
+          <NavLink to="/sinav/trafik" className={classes.sinavKategori}>
             <img src={trafikKategori} />
             <h1>Trafik Soruları</h1>
           </NavLink>
 
-          <NavLink to="/dashboard/sinav/trafikadabi" className={classes.sinavKategori}>
+          <NavLink to="/sinav/trafikadabi" className={classes.sinavKategori}>
             <img src={trafikAdabiKategori} />
             <h1>Trafik Adabı Soruları</h1>
           </NavLink>

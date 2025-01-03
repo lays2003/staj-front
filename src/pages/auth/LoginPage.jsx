@@ -22,7 +22,6 @@ export default function() {
       setError(response.errorMsg);
     } else {
       ctx.saveUser(response.kullanici)
-      
     }
     setLoading(false);
   }

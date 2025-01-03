@@ -27,7 +27,7 @@ function UnAuthRoutes() {
   return (
     !ctx.user
     ? <Outlet />
-    : <Navigate to="/dashboard" />
+    : <Navigate to="/" />
   );
 }
 
@@ -36,7 +36,7 @@ function AdminPages() {
   return (
     ctx.user.yonetici
     ? <Outlet />
-    : <Navigate to="/dashboard" />
+    : <Navigate to="/" />
   );
 }
 
@@ -45,7 +45,7 @@ function UserPages() {
   return (
     !ctx.user.yonetici
     ? <Outlet />
-    : <Navigate to="/dashboard" />
+    : <Navigate to="/" />
   );
 }
 
@@ -55,7 +55,7 @@ function App() {
       <Routes>
 
         <Route element={<AuthRoutes />}>
-          <Route path='/dashboard' element={<DashboardLayout />} >
+          <Route path='/' element={<DashboardLayout />} >
             <Route path='profil' element={<ProfilPage />} />
             <Route path='' element={<AdminPages />} >
               <Route path='sorular' element={<SorularPage />} />

@@ -7,6 +7,7 @@ export default function({soruIdx, soru, dogruCevap, value, setValue}) {
       <div className={classes.soruCont}>
         <p> Soru {soruIdx + 1}: </p>
         <h1>{soru.soru}</h1>
+        {soru.resim && <img className={classes.resim} src={soru.resim} />}
       </div>
       <form className={classes.cevaplar}>
         <div className={classes.cevapCont}>
